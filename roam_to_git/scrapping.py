@@ -180,7 +180,7 @@ async def _download_rr_archive(document: Page,
     raise FileNotFoundError("Impossible to download {} in {}", output_type, output_directory)
 
 
-async def signin(document, config: Config, sleep_duration=1.):
+async def signin(document, config: Config, sleep_duration=5.):
     """Sign-in into Roam"""
     logger.debug("Opening signin page")
     await document.goto('https://roamresearch.com/#/signin')
